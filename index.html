@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 1</title>
+  </head>
+  <body>
+    <script>
+      function boichung(arr) {
+        let total = 0;
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] % 3 === 0 && arr[i] % 5 === 0) {
+            total += arr[i];
+          }
+        }
+        return total;
+      }
+
+      let arr = [];
+      while (arr.length < 20) {
+        let num = parseInt(
+          prompt(`Nhập số thứ ${arr.length + 1} ( nhập 0 để thoát):`)
+        );
+        if (num === 0) {
+          break;
+        }
+        arr.push(num);
+      }
+
+      let total = boichung(arr);
+      console.log(`Tổng bội chung của 3 và 5 trong mảng: ${total}`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 2</title>
+  </head>
+  <body>
+    <script>
+      function mark(score) {
+        if (score < 48) {
+          return score;
+        }
+
+        let boiOffive = Math.ceil(score / 5) * 5;
+
+        if (boiOffive - score < 3) {
+          score = boiOffive;
+        }
+
+        return score;
+      }
+
+      let markStudent = parseInt(prompt("Nhập điểm số của bạn:"));
+
+      let diem = mark(markStudent);
+      alert(`Điểm số sau khi làm tròn là: ${diem}`);
+    </script>
+  </body>
+</html>
